@@ -22,7 +22,7 @@ syn match gssOperators "\v\=\="
 syn match gssOperators "\v\\\s*$"
 
 " Treat '=' special
-syn match gssConstants "[+-]\?[a-zA-Z0-9\."]\+" contained
+syn match gssConstants "[+-]\?[a-zA-Z0-9\._"]\+" contained
 syn match gssOperators "\v\=" nextgroup=gssConstants skipwhite
 
 " Stuff members of other stuff, e.g. foo.bar
@@ -42,9 +42,10 @@ syn keyword gssVarKeywords Scheme Resolution AzAngle ElAngle Style
 syn keyword gssVarKeywords CoreFile AscFile VTKFile Region Segment
 syn keyword gssVarKeywords ProbeFile Res Cap Ind ImpactIonization
 syn keyword gssVarKeywords VScan IVRecord IVFile VStart VStop VStep
+syn keyword gssVarKeywords WorkFunction Ratio
 
 " special stuff
-syn keyword gssSpeKeywords set boundary 
+syn keyword gssSpeKeywords set boundary contact
 
 let b:current_syntax = "gss"
 

@@ -19,6 +19,7 @@ syn match gssOperators "\v/\="
 syn match gssOperators "\v\+\="
 syn match gssOperators "\v-\="
 syn match gssOperators "\v\=\="
+syn match gssOperators "\v\\\s*$"
 
 " Treat '=' special
 syn match gssConstants "[+-]\?[a-zA-Z0-9\."]\+" contained
@@ -31,6 +32,7 @@ syn match gssClass /\w\+\./me=e-1
 " Keywords
 syn keyword gssGeoKeywords MESH XMESH YMESH REGION SEGMENT PROFILE
 syn keyword gssActKeywords PLOT REFINE METHOD SOLVE PROBE EXPORT END
+syn keyword gssActKeywords IMPORT
 
 " Settable variables for gemoetries and procedures
 syn keyword gssVarKeywords Type ModelFile Triangle Label Material 
@@ -38,7 +40,8 @@ syn keyword gssVarKeywords Location Direction Ion Carrier LatticeTemp
 syn keyword gssVarKeywords DopingScale Variable Measure Dispersion
 syn keyword gssVarKeywords Scheme Resolution AzAngle ElAngle Style
 syn keyword gssVarKeywords CoreFile AscFile VTKFile Region Segment
-syn keyword gssVarKeywords ProbeFile Res Cap Ind
+syn keyword gssVarKeywords ProbeFile Res Cap Ind ImpactIonization
+syn keyword gssVarKeywords VScan IVRecord IVFile VStart VStop VStep
 
 " special stuff
 syn keyword gssSpeKeywords set boundary 
